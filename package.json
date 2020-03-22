@@ -4,8 +4,9 @@
   "description": "A vue webpack multi-page template",
   "author": "Alexander Toop",
   "scripts": {
-    "start": "npm run build && webpack-dev-server --hot --open",
-    "build": "webpack --config webpack.config.js"
+    "clean": "rm -rf build",
+    "start": "npm run clean && npm run build && webpack-dev-server --hot --open",
+    "build": "rm -rf build && webpack --config webpack.config.js"
   },
   "main": "src/index.html",
   "devDependencies": {
