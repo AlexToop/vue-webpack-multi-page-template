@@ -7,6 +7,7 @@ module.exports = {
     index: './src/main.js',
     about: './src/about/main.js'
   },
+  mode: process.env.NODE_ENV,
   module: {
     rules: [
       {
