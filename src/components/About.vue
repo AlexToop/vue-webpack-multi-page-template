@@ -1,17 +1,21 @@
 <template lang="html">
   <div id="app">
-    <nav-bar v-bind:navbarContents="navbarContents"></nav-bar>
+    <nav-bar :navbar-contents="navbarContents" />
 
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column"></div>
+          <div class="column" />
           <div class="column is-three-quarters">
-            <p class="title">Example About page.</p>
-            <p class="subtitle">Example text.</p>
+            <p class="title">
+              Example About page.
+            </p>
+            <p class="subtitle">
+              Example text.
+            </p>
             <p><b>More </b>example text body.</p>
           </div>
-          <div class="column"></div>
+          <div class="column" />
         </div>
       </div>
     </section>
@@ -20,10 +24,10 @@
 
 <script>
 import navbar from "./Navbar.vue";
-require("bulma/css/bulma.min.css");
+import "bulma/css/bulma.min.css";
 
 export default {
-  name: "app",
+  name: "App",
   components: {
     "nav-bar": navbar
   },

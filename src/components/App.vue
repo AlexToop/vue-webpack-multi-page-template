@@ -1,11 +1,11 @@
 <template lang="html">
   <div id="app">
     <nav-bar
-      v-bind:navbarContents="navbarContents"
-      v-bind:imgUrl="imgUrl"
-    ></nav-bar>
+      :navbar-contents="navbarContents"
+      :img-url="imgUrl"
+    />
 
-    <beta-banner></beta-banner>
+    <beta-banner />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import navbar from "./Navbar.vue";
 import betaBanner from "./BetaBanner.vue";
 
 export default {
-  name: "app",
+  name: "App",
   components: {
     "nav-bar": navbar,
     "beta-banner": betaBanner
@@ -49,11 +49,11 @@ export default {
       }
     };
   },
-  methods: {},
   beforeMount: function() {},
   mounted: function() {
     this.$nextTick(function() {});
-  }
+  },
+  methods: {}
 };
 </script>
 

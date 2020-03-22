@@ -7,7 +7,10 @@
     >
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="/">
+          <a
+            class="navbar-item"
+            href="/"
+          >
             <p><b>Example App</b></p>
           </a>
 
@@ -18,19 +21,22 @@
             aria-expanded="false"
             data-target="navbarBasicExample"
           >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div
+          id="navbarBasicExample"
+          class="navbar-menu"
+        >
           <div class="navbar-start">
             <a
               v-for="link in navbarContents.links"
               class="navbar-item"
-              v-bind:href="link.href || '#'"
-              v-bind:class="link.class"
+              :href="link.href || '#'"
+              :class="link.class"
             >
               {{ link.name }}
             </a>
@@ -42,14 +48,15 @@
                 <a
                   v-for="button in navbarContents.buttons"
                   class="button"
-                  v-bind:class="button.class"
-                  v-bind:href="button.href"
-                  v-on:click="toggleLogoutModal(button)"
-                  ><strong>{{ button.text }}</strong></a
-                >
+                  :class="button.class"
+                  :href="button.href"
+                ><strong>{{ button.text }}</strong></a>
 
                 <figure class="image is-48x48">
-                  <img class="is-rounded" :src="imgUrl" />
+                  <img
+                    class="is-rounded"
+                    :src="imgUrl"
+                  >
                 </figure>
               </div>
             </div>
@@ -57,25 +64,16 @@
         </div>
       </div>
     </nav>
-    <modal
-      v-bind:uniqueModalName="'logoutModal'"
-      v-bind:title="'Logout?'"
-      v-bind:htmlInnerContent="logoutInnerHtml"
-    ></modal>
   </div>
 </template>
 
 <script>
-let $ = require("jquery/dist/jquery.slim");
-require("bulma/css/bulma.min.css");
-import modal from "./Modal.vue";
+import $ from "jquery/dist/jquery.slim";
+import "bulma/css/bulma.min.css";
 
 export default {
-  name: "navbar",
-  components: {
-    modal: modal
-  },
-  methods: {},
+  name: "Navbar",
+  props: ["navbarContents", "imgUrl"],
   data: function() {
     return {
       logoutInnerHtml:
@@ -87,7 +85,7 @@ export default {
       document.addEventListener("logoutModalPositive", this.logout);
     });
   },
-  props: ["navbarContents", "imgUrl"]
+  methods: {}
 };
 
 $(document).ready(function() {
