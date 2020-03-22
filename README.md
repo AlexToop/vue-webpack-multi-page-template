@@ -3,6 +3,8 @@ A template to make setting up simple Vue Webpack projects easier when using mult
 
 ## Adding linting
 
+When initializing eslint I would strongly recommend adding Vue support.
+
 ```
 npm install eslint --save-dev
 ```
