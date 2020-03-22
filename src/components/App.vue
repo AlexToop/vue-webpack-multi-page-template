@@ -10,51 +10,51 @@
 </template>
 
 <script>
-import navbar from "./Navbar.vue";
-import betaBanner from "./BetaBanner.vue";
+import navbar from './Navbar.vue'
+import betaBanner from './BetaBanner.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "nav-bar": navbar,
-    "beta-banner": betaBanner
+    'nav-bar': navbar,
+    'beta-banner': betaBanner
   },
-  data: function() {
+  data: function () {
     return {
       navbarContents: {
         links: [
           {
-            name: "Home",
-            class: "is-active",
-            href: "/",
-            icon: "fa-home",
-            iconColor: "has-text-primary"
+            name: 'Home',
+            class: 'is-active',
+            href: '/',
+            icon: 'fa-home',
+            iconColor: 'has-text-primary'
           },
           {
-            name: "About",
-            class: "",
-            href: "/about/",
-            icon: "fa-info-circle",
-            iconColor: "has-text-dark"
+            name: 'About',
+            class: '',
+            href: '/about/',
+            icon: 'fa-info-circle',
+            iconColor: 'has-text-dark'
           }
         ],
         buttons: [
           {
-            text: "alextoop.com",
-            class: "is-info",
-            href: "https://alextoop.com",
-            isLogout: "false"
+            text: 'alextoop.com',
+            class: 'is-info',
+            href: 'https://alextoop.com',
+            isLogout: 'false'
           }
         ]
       }
-    };
+    }
   },
-  beforeMount: function() {},
-  mounted: function() {
-    this.$nextTick(function() {});
+  beforeMount: function () {},
+  mounted: function () {
+    this.$nextTick(function () {})
   },
   methods: {}
-};
+}
 </script>
 
 <style>

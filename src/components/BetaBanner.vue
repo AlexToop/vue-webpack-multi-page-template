@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import "bulma/css/bulma.min.css";
+import 'bulma/css/bulma.min.css'
 
 export default {
-  name: "BetaBanner"
-};
+  name: 'BetaBanner'
+}
 </script>
 
 <style scoped></style>

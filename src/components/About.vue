@@ -23,45 +23,45 @@
 </template>
 
 <script>
-import navbar from "./Navbar.vue";
-import "bulma/css/bulma.min.css";
+import navbar from './Navbar.vue'
+import 'bulma/css/bulma.min.css'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "nav-bar": navbar
+    'nav-bar': navbar
   },
-  data: function() {
+  data: function () {
     return {
       navbarContents: {
         links: [
           {
-            name: "Home",
-            class: "",
-            href: "/",
-            icon: "fa-home",
-            iconColor: "has-text-primary"
+            name: 'Home',
+            class: '',
+            href: '/',
+            icon: 'fa-home',
+            iconColor: 'has-text-primary'
           },
           {
-            name: "About",
-            class: "is-active",
-            href: "/about/",
-            icon: "fa-info-circle",
-            iconColor: "has-text-dark"
+            name: 'About',
+            class: 'is-active',
+            href: '/about/',
+            icon: 'fa-info-circle',
+            iconColor: 'has-text-dark'
           }
         ],
         buttons: [
           {
-            text: "alextoop.com",
-            class: "is-info",
-            href: "https://www.alextoop.com",
-            isLogout: "false"
+            text: 'alextoop.com',
+            class: 'is-info',
+            href: 'https://www.alextoop.com',
+            isLogout: 'false'
           }
         ]
       }
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

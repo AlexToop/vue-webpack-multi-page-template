@@ -68,32 +68,32 @@
 </template>
 
 <script>
-import $ from "jquery/dist/jquery.slim";
-import "bulma/css/bulma.min.css";
+import $ from 'jquery/dist/jquery.slim'
+import 'bulma/css/bulma.min.css'
 
 export default {
-  name: "Navbar",
-  props: ["navbarContents", "imgUrl"],
-  data: function() {
+  name: 'Navbar',
+  props: ['navbarContents', 'imgUrl'],
+  data: function () {
     return {
       logoutInnerHtml:
         '<article class="message is-danger"><div class="message-body">Are you sure?</div></article>'
-    };
+    }
   },
-  mounted: function() {
-    this.$nextTick(function() {
-      document.addEventListener("logoutModalPositive", this.logout);
-    });
+  mounted: function () {
+    this.$nextTick(function () {
+      document.addEventListener('logoutModalPositive', this.logout)
+    })
   },
   methods: {}
-};
+}
 
-$(document).ready(function() {
-  $(".navbar-burger").click(function() {
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
-  });
-});
+$(document).ready(function () {
+  $('.navbar-burger').click(function () {
+    $('.navbar-burger').toggleClass('is-active')
+    $('.navbar-menu').toggleClass('is-active')
+  })
+})
 </script>
 
 <style scoped>
